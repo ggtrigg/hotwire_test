@@ -3,4 +3,5 @@ class SaveCoin < Coin::SaveOperation
   # https://luckyframework.org/guides/database/saving-records#perma-permitting-columns
   #
   permit_columns country, denomination, value, album_id
+  upsert_lookup_columns :id
 end
