@@ -88,10 +88,6 @@ shards:
     git: https://github.com/luckyframework/teeplate.git
     version: 0.8.4
 
-  turbo:
-    git: https://github.com/jgaskins/turbo.git
-    version: 0.1.0+git.commit.8685616e26d7903d1559f5f3f8b96085bc10af12
-
   webdrivers:
     git: https://github.com/matthewmcgarvey/webdrivers.cr.git
     version: 0.4.0

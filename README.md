@@ -1,11 +1,12 @@
-# hotwire_test
+# Hotwire test
 
-This is a project written using [Lucky](https://luckyframework.org). Enjoy!
+This is a simple app written using [Lucky](https://luckyframework.org) to explore using the [hotwire](https://hotwired.dev/) approach.
+At the moment it just uses the [turbo](https://turbo.hotwired.dev/) component (turbo-frames & turbo-streams).
+
+This just implements a simple coin album collection. It has limited functionality and usefulness apart from demonstrating the hotwire approach.
 
 ### Setting up the project
 
-1. [Install required dependencies](https://luckyframework.org/guides/getting-started/installing#install-required-dependencies)
-1. Update database settings in `config/database.cr`
 1. Run `script/setup`
 1. Run `lucky dev` to start the app
 

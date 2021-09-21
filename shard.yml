@@ -29,8 +29,8 @@ dependencies:
   lucky_task:
     github: luckyframework/lucky_task
     version: ~> 0.1.0
-  turbo:
-    github: jgaskins/turbo
+  # turbo:
+  #   github: jgaskins/turbo
 development_dependencies:
   lucky_flow:
     github: luckyframework/lucky_flow
