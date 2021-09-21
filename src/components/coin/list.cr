@@ -1,9 +1,15 @@
 class Coin::List < BaseComponent
   
   needs album : Album
+  needs error : String?
 
   def render
     tag "turbo-frame", id: "coins" do
+      if err = error
+        div class: "alert alert-primary", role: "alert" do
+          text err
+        end
+      end
       link "New coin", class: "btn btn-primary btn-sm float-end", to: Coin::New.with(album)
       h3 album.name
       table class: "table" do

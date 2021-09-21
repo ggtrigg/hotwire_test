@@ -5,8 +5,7 @@ class Coin::Create < BrowserAction
       if coin
         component Coin::List, album: album
       else
-        # component Coin::NewForm, album: album, error: "Error saving coin, try again"
-        component Coin::NewForm, coin_op: SaveCoin.new, album: album
+        component Coin::NewForm, coin_op: SaveCoin.new, album: album, error: "Error saving coin, try again."
       end
     end
   end

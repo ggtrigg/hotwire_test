@@ -20,8 +20,13 @@ class Coin::NewForm < BaseComponent
           number_input coin_op.value, attrs: [:required], class: "form-control", placeholder: "Value"
           label_for coin_op.value, class: "form-label"
         end
-        div class: "mx-auto" do
-          submit "Create coin", class: "btn btn-primary"
+        div do
+          span do
+            link "Cancel", to: Album::Show.with(album), class: "btn btn-danger"
+          end
+          span class: "ms-auto" do
+            submit "Create coin", class: "btn btn-primary"
+          end
         end
       end
     end  
