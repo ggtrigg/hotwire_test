@@ -64,3 +64,15 @@ textarea {
   margin: 9px 0;
   padding: 6px 9px;
 }
+
+.album-name {
+  border-color: darkgray;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  margin: 2px;
+}
+
+.album-name .btn-close {
+  margin-left: 2em;
+}
