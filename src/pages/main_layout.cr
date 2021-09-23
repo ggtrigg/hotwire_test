@@ -19,8 +19,12 @@ abstract class MainLayout
       mount Shared::LayoutHead, page_title: page_title
 
       body do
-        div class: "container-sm" do
-          mount Shared::FlashMessages, context.flash
+        div class: "container mt-4" do
+          div class: "row" do
+            tag "turbo-frame", id: "flash" do
+              mount Shared::FlashMessages, context.flash
+            end
+          end
           content
         end
       end

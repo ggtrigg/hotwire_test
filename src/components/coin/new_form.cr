@@ -20,7 +20,7 @@ class Coin::NewForm < BaseComponent
           number_input coin_op.value, attrs: [:required], class: "form-control", placeholder: "Value"
           label_for coin_op.value, class: "form-label"
         end
-        div do
+        div class: "d-flex" do
           span do
             link "Cancel", to: Album::Show.with(album), class: "btn btn-danger"
           end

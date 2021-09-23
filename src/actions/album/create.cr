@@ -4,11 +4,20 @@ class Album::Create < BrowserAction
   post "/album" do
     Log.info { "html: #{html?}, turbo-stream: #{accepts?(:turbo_stream)}" }
     SaveAlbum.upsert(params) do |operation, album|
+      Log.info { operation }
       if album
-        album_ts = Album::StreamAppend.new(album: album)
-        send_text_response(album_ts.render_to_string, content_type: "text/vnd.turbo-stream.html")
+        if operation.new_record?
+          album_ts = Album::StreamAppend.new(album: album)
+          send_text_response(album_ts.render_to_string, content_type: "text/vnd.turbo-stream.html")
+        else
+          flash.info = "Album '#{album.name}' already exists"
+          flash_ts = Shared::FlashMessages.new(flash: flash, use_turbo: true)
+          send_text_response(flash_ts.render_to_string, content_type: "text/vnd.turbo-stream.html")
+        end
       else
-        plain_text "Error creating album."
+        flash.failure = "Error creating album. #{operation.errors.join(", ")}"
+        flash_ts = Shared::FlashMessages.new(flash: flash, use_turbo: true)
+        send_text_response(flash_ts.render_to_string, content_type: "text/vnd.turbo-stream.html")
       end
     end
   end
