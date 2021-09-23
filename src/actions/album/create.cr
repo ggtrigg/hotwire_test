@@ -1,6 +1,6 @@
 class Album::Create < BrowserAction
   accepted_formats [:html, :turbo_stream], default: :turbo_stream
-  
+
   post "/album" do
     Log.info { "html: #{html?}, turbo-stream: #{accepts?(:turbo_stream)}" }
     SaveAlbum.upsert(params) do |operation, album|

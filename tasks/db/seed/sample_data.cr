@@ -15,7 +15,7 @@ class Db::Seed::SampleData < LuckyTask::Task
     3.times { AlbumFactory.create }
     r = Random.new
     AlbumQuery.new.each do |album|
-      r.rand(5..30).times { CoinFactory.create &.album_id(album.id)}
+      r.rand(5..30).times { CoinFactory.create &.album_id(album.id) }
     end
 
     # Using a SaveOperation:

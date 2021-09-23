@@ -2,7 +2,7 @@ class Home::IndexPage < MainLayout
   def page_title
     "Coin Collection (Hotwire Test)"
   end
-  
+
   def content
     div class: "row" do
       div class: "col" do

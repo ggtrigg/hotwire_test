@@ -1,5 +1,4 @@
 class Coin::List < BaseComponent
-  
   needs album : Album
   needs error : String?
 
@@ -21,7 +20,7 @@ class Coin::List < BaseComponent
       end
     end
   end
-  
+
   def get_coin_list
     album.reload(&.preload_coins(CoinQuery.new.country.asc_order)).coins.each do |coin|
       tr do

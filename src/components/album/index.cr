@@ -1,7 +1,6 @@
 class Component::Album::Index < BaseComponent
-
   needs album_op : SaveAlbum = SaveAlbum.new
-  
+
   def render
     tag "turbo-frame", id: "albums", target: "coins" do
       form_for ::Album::Create do

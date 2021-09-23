@@ -1,9 +1,9 @@
 class Coin::NewForm < BaseComponent
-  
   needs coin_op : SaveCoin
   needs album : Album
+
   # needs error : String?
-  
+
   def render
     tag "turbo-frame", id: "coins" do
       h3 "#{album.name} - Add coin"
@@ -29,6 +29,6 @@ class Coin::NewForm < BaseComponent
           end
         end
       end
-    end  
+    end
   end
 end

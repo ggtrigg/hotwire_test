@@ -15,7 +15,7 @@ class Shared::FlashMessages < BaseComponent
       flash_sections
     end
   end
-  
+
   def flash_sections
     flash.each do |flash_type, flash_message|
       div class: "col" do

@@ -7,7 +7,7 @@ class CreateCoins::V20210918105223 < Avram::Migrator::Migration::V1
       add country : String
       add denomination : String
       add value : Int32
-      
+
       add_belongs_to album : Album, on_delete: :cascade
     end
   end

@@ -1,7 +1,6 @@
 class Album::Entry < BaseComponent
-  
   needs album : Album
-  
+
   def render
     div class: "col-sm-auto album-name", id: "album-#{album.id}" do
       link album.name, to: ::Album::Show.with(album)
