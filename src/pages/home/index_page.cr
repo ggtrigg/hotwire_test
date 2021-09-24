@@ -9,7 +9,7 @@ class Home::IndexPage < MainLayout
         h1 "Coin Collection (Hotwire Test)"
       end
     end
-    div class: "row my-4" do
+    div class: "row my-4", data_controller: "album" do
       div class: "col" do
         tag "turbo-frame", id: "albums", src: "/albums", target: "coins"
       end

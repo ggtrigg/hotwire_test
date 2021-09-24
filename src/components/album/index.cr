@@ -3,7 +3,7 @@ class Component::Album::Index < BaseComponent
 
   def render
     tag "turbo-frame", id: "albums", target: "coins" do
-      form_for ::Album::Create do
+      form_for ::Album::Create, data_action: "turbo:submit-end->album#clear_input" do
         div class: "row" do
           label_for album_op.name, class: "col-auto col-form-label"
           div class: "col-auto" do
