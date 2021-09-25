@@ -12,7 +12,7 @@ class Shared::LayoutHead < BaseComponent
       script src: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js", data_turbolinks_track: "reload",
         integrity: "sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf", crossorigin: "anonymous"
       js_link asset("js/app.js"), defer: "true", data_turbolinks_track: "reload"
-      js_link "https://unpkg.com/@hotwired/turbo@7.0.0-beta.4/dist/turbo.es5-umd.js"
+      # js_link "https://unpkg.com/@hotwired/turbo@7.0.0-beta.4/dist/turbo.es5-umd.js"
       meta name: "turbolinks-cache-control", content: "no-cache"
       csrf_meta_tags
       responsive_meta_tag

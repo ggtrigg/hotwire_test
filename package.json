@@ -2,6 +2,7 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@hotwired/turbo": "^7.0.0",
     "@rails/ujs": "^6.0.0",
     "modern-normalize": "^1.1.0",
     "turbolinks": "^5.2.0"
