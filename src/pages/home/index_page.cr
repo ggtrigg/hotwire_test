@@ -11,7 +11,7 @@ class Home::IndexPage < MainLayout
     end
     div class: "row my-4" do
       div class: "col" do
-        tag "turbo-frame", id: "albums", src: "/albums", target: "coins"
+        tag "turbo-frame", id: "albums", src: Album::Index.route.path, target: "coins"
       end
     end
     div class: "row" do
