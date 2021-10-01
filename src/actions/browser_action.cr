@@ -12,8 +12,4 @@ abstract class BrowserAction < Lucky::Action
   include Lucky::SecureHeaders::DisableFLoC
 
   accepted_formats [:html, :json], default: :html
-  
-  if LuckyEnv.production?
-    route_prefix "/hotwire_test"
-  end
 end
