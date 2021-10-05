@@ -11,6 +11,7 @@ class Home::IndexPage < MainLayout
     end
     div class: "row my-4" do
       div class: "col" do
+        para "A simple demo coin collection app comprising of multiple albums containing multiple coins. This is to demonstrate various components of the \"hotwire\" approach - namely turbo (using turbo-frame & turbo-stream) and stimulus (javascript framework)."
         tag "turbo-frame", id: "albums", src: Album::Index.route.path, target: "coins"
       end
     end
